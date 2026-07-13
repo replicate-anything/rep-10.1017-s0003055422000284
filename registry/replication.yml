@@ -20,5 +20,6 @@ maintainer:
 collections:
 - APSR
 languages:
+- r
 - stata
 
