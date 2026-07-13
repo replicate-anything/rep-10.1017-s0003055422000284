@@ -1,0 +1,45 @@
+* Shared globals and author programs (after loading outputs/data.dta)
+
+* Outcome bundles used in later tables
+global P3 ijacagarb_correct ijacthr_correct ijacnoi_correct ijacrbur_correct ijaccog_correct ijacdv_correct ijacrob_correct
+global P3_lead $P3
+global P4 rely_state_hyp_dum rely_state_actual_dum rely_state_others_hyp_dum
+global P4_lead $P4 rely_state_jac_hyp_dum
+global P5 garbfa_match_mode garbla_match_mode bdfa_match_mode bdla_match_mode dvfa_match_mode dvla_match_mode fafa_match_mode fala_match_mode
+global P5_lead $P5
+global P5_match_res garbfa_match_mode_res garbla_match_mode_res bdfa_match_mode_res bdla_match_mode_res dvfa_match_mode_res dvla_match_mode_res fafa_match_mode_res fala_match_mode_res
+global P5_match_lead garbfa_match_mode_lead garbla_match_mode_lead bdfa_match_mode_lead bdla_match_mode_lead dvfa_match_mode_lead dvla_match_mode_lead fafa_match_mode_lead fala_match_mode_lead
+global rely_comm rely_jac_hyp_dum rely_jac_actual_dum rely_jac_others_hyp_dum
+global rely_comm_lead $rely_comm
+global rely_comm_juris rely_jac_hyp_j_dum rely_jac_actual_j_dum rely_jac_others_hyp_j_dum
+global rely_comm_no_juris rely_jac_hyp_nj_dum rely_jac_actual_nj_dum rely_jac_others_hyp_nj_dum
+global P7 rely_pol_pi_hyp_dum rely_pol_pi_actual_dum rely_pol_pi_others_hyp_dum
+global P7_lead $P7
+global P7_pol rely_pol_hyp_dum rely_pol_actual_dum rely_pol_others_hyp_dum
+global P7_pi rely_pi_hyp_dum rely_pi_actual_dum rely_pi_others_hyp_dum
+global P7_pi_lead $P7_pi
+global P7_juris rely_pol_hyp_j_dum rely_pi_hyp_j_dum rely_pol_actual_j_dum rely_pi_actual_j_dum rely_pol_others_hyp_j_dum rely_pi_others_hyp_j_dum
+global P7_juris_lead $P7_juris
+global P7_no_juris rely_pol_hyp_nj_dum rely_pi_hyp_nj_dum rely_pol_actual_nj_dum rely_pi_actual_nj_dum rely_pol_others_hyp_nj_dum rely_pi_others_hyp_nj_dum
+global P7_no_juris_lead $P7_juris
+global P8 rely_ag_hyp_dum rely_ag_actual_dum rely_ag_others_hyp_dum rely_ag_others_dum
+global P8_lead $P8 helpag_jac_dum
+global S3_lead jac_confianza jac_meetings_month jac_harmony
+global S4_lead piphone_yes polphone_yes suipjac_dum supojac_dum conjacpi conjacpo copijac cohpijac
+global S4_pi nbr_jac_pi_yes cont_com_pi freq_vst_pi_dum
+global S4_pol nbr_jac_pol_yes cont_com_pol freq_vst_pol_dum
+global S5 trustpol_dum_alt knowpol_dum_alt resolpol_dum_alt trustpi_dum_alt knowpi_dum_alt resolpi_dum_alt
+global S6 trustjac_dum_alt knowjac_dum_alt resoljac_dum_alt
+global S7 trustag_dum_alt knowag_dum_alt resolag_dum_alt fairag_dum
+global S7_lead $S7
+global HTE_victimization vict_idx_std vict_ag_idx_std vict_reb_idx_std vict_para_idx_std vict_state_idx_std
+global HTE_governance ag_gov_idx_std rebel_gov_idx_std para_gov_idx_std
+
+global i_ctrls age male ihresid quality_walls quality_floors preschool primary_school middle_school employed
+global c_ctrls ipopulation hubdist km minutes
+global block_FE block_FE*
+
+do "${maindir}/code/helpers/avg_effect_weighted.do"
+do "${maindir}/code/helpers/multi_comparison.do"
+
+label variable assigned "Assigned to treatment"

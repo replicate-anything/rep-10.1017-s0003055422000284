@@ -1,0 +1,4 @@
+.Rproj.user/
+*.log
+outputs/staging/
+outputs/data.dta
