@@ -20,6 +20,7 @@ collections:
 repo: replicate-anything/rep-10.1017-s0003055422000284
 
 dataverse:
+  doi: https://doi.org/10.7910/DVN/OXSQMU
   server: dataverse.harvard.edu
   dataset: "10.7910/DVN/OXSQMU"
   file: data-1.tab

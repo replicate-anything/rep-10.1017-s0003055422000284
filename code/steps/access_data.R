@@ -25,6 +25,7 @@ make_access_data <- function() {
     stop("dataverse.file is required in replication.yml.", call. = FALSE)
   }
 
+  # Deposit lists data-1.tab; metadata originalFileName is data-1.dta — fetch native Stata.
   dat <- dataverse::get_dataframe_by_name(
     filename = filename,
     dataset = dataset,

@@ -54,6 +54,11 @@ wrap_esttab_html <- function(html) {
 
 read_esttab_html <- function(path) {
   html <- paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+  if (exists("sanitize_esttab_html", mode = "function")) {
+    html <- sanitize_esttab_html(html)
+  } else if (requireNamespace("replicateEverything", quietly = TRUE)) {
+    html <- replicateEverything:::sanitize_esttab_html(html)
+  }
   wrap_esttab_html(html)
 }
 

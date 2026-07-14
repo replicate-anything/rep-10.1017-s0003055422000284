@@ -31,8 +31,7 @@ esttab unresolved_dum_ITT_res unresolved_dum_ITT_lead iverb_phys_dum_ITT_res ive
     html replace ///
     label b(3) se(3) eqlabels(none) ///
     mtitle("Residents" "Leaders" "Residents" "Leaders") ///
-    mgroups("Any unresolved disputes" "Any violent disputes", pattern(1 0 1 0) ///
-        prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) ///
+    mgroups("Any unresolved disputes" "Any violent disputes", pattern(1 0 1 0)) ///
     keep(assigned) ///
     star(* 0.10 ** 0.05 *** 0.01) nonotes ///
     scalars("i_ctrls Individual controls" "c_ctrls Community controls" "block_FE Block FE" "weights Weights" "estimator Estimator")
