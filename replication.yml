@@ -65,7 +65,8 @@ steps:
     outputs:
       - outputs/tab_1/tab_1_stata.log
       - outputs/tab_1.html
-    artifact: outputs/tab_1.html
+    outputs:
+      - outputs/tab_1.html
 
   - id: tab_1_format
     type: format
