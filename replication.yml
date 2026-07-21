@@ -38,7 +38,6 @@ steps:
     type: transform
     label: Access data from Dataverse
     description: Download analysis dataset from Harvard Dataverse and save as Stata .dta
-    parents: []
     engine: r
     code: code/steps/access_data.R
     dependencies:
@@ -68,6 +67,5 @@ steps:
 
   - id: tab_1_format
     type: format
-    label: Table 1 format
     parent: tab_1
     code: code/helpers/format_stata.R
